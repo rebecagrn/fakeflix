@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const HeaderStyle = styled.header`
   nav {
     position: fixed;
-    z-index: 5;
+    z-index: 99;
     top: 0;
     left: 0;
     right: 0;
