@@ -12,14 +12,14 @@ export default {
     return [
       {
         slug: "originals",
-        title: "Originals",
+        title: "Fakeflix Originals",
         items: await fetchUrl(
           `/discover/tv?with_network=213&api_key=${API_KEY}`
         ),
       },
       {
         slug: "trending",
-        title: "Trending",
+        title: "Trending in Sweden",
         items: await fetchUrl(`/trending/all/week?api_key=${API_KEY}`),
       },
       {
