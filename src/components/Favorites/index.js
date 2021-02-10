@@ -3,7 +3,7 @@ import { GlobalContext } from "../../context/GlobalState";
 import Header from "../Header";
 import { FavoriteCard, FavText } from "./styles";
 import { MovieItem } from "../MovieCard/styles";
-import { FaEye, FaTrash } from "react-icons/fa";
+import { FaEye } from "react-icons/fa";
 
 export default function Favorites({ item, type }) {
   const { favorite, addMovieToWatchlater } = useContext(GlobalContext);
@@ -22,7 +22,7 @@ export default function Favorites({ item, type }) {
                 />
                 <div type={type} item={item}>
                   <button onClick={() => addMovieToWatchlater(item)}>
-                    Watchlater <FaEye />
+                    To Watch Later <FaEye />
                   </button>
                 </div>
               </MovieItem>

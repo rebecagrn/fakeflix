@@ -17,10 +17,16 @@ export const FavoriteCard = styled.div`
     border: 0;
     border-radius: 4px;
     width: 100%;
+    transform: scale(0.9);
 
     svg {
       position: relative;
       top: 3px;
+    }
+
+    &:hover {
+      transform: scale(1);
+      opacity: 0.8;
     }
   }
 `;
