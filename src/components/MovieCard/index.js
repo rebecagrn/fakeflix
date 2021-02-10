@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import { CardRow, CardArea, MovieItem, Button } from "./styles";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import { FaHeart } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
 
 export default function MovieCard({ title, items }) {
   const { addMovieToFavorite, favorite } = useContext(GlobalContext);
@@ -62,7 +62,7 @@ export default function MovieCard({ title, items }) {
                       disabled={favoriteDisabled}
                       onClick={() => addMovieToFavorite(item)}
                     >
-                      <FaHeart color="#ccc" size={20} />
+                      <FaStar color="#ccc" size={20} />
                     </Button>
                   </div>
                 </MovieItem>

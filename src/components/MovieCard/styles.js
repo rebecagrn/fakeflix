@@ -101,7 +101,7 @@ export const Button = styled.button`
 
   &:disabled {
     svg {
-      color: red !important;
+      color: #ffcc29 !important;
     }
   }
 `;
