@@ -17,7 +17,7 @@ export default function Favorites({ item, type }) {
             <div key={key} type="favorite" style={{ margin: "10px 20px" }}>
               <MovieItem key={key}>
                 <img
-                  src={`https://image.tmdb.org/t/p/w300${item.poster_path}`}
+                  src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
                   alt={item.original_title}
                 />
                 <div type={type} item={item}>

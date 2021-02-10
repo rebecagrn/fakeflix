@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const FavoriteCard = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: start;
   margin-top: 150px;
   padding: 10px 30px;
 

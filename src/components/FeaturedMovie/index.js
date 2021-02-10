@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaPlay, FaPlus } from "react-icons/fa";
+import { FaPlay, FaStar } from "react-icons/fa";
 import { Featured, FeaturedTitle, Info, Buttons } from "./styles";
 
 export default function FeaturedMovie({ item }) {
@@ -36,8 +36,8 @@ export default function FeaturedMovie({ item }) {
               <Link to={`/watch/${item.id}`} className="btn-watch">
                 <FaPlay size={14} /> Watch Now
               </Link>
-              <Link to={`/watchlist/add/${item.id}`} className="btn-mylist">
-                <FaPlus size={14} /> My List
+              <Link to={`/favorites/${item.id}`} className="btn-mylist">
+                <FaStar size={14} /> My Favs
               </Link>
             </Buttons>
             <div className="item--genres">

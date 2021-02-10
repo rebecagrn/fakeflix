@@ -70,4 +70,10 @@ export default {
     }
     return info;
   },
+
+  getMovieSearch: async (query) => {
+    const info = await fetchUrl(`/search/movie?api_key=${API_KEY}&${query}`);
+
+    return info;
+  },
 };

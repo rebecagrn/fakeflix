@@ -64,6 +64,7 @@ export const HeaderStyle = styled.header`
 export const NavList = styled.ul`
   display: flex;
   list-style: none;
+  align-items: center;
 `;
 
 export const NavLink = styled.li`
