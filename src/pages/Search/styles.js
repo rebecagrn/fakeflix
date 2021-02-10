@@ -23,10 +23,11 @@ export const SearchRow = styled.div`
 export const SearchCard = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 5px 25px;
+  margin: 5px 15px;
 
   img {
     width: 200px;
+    padding: 10px;
   }
 
   .movie--title {
@@ -34,5 +35,6 @@ export const SearchCard = styled.div`
     font-weight: 600;
     margin-top: 5px;
     margin-bottom: 8px;
+    max-width: 150px;
   }
 `;
