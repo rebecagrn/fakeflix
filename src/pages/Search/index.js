@@ -1,10 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import api from "../../services/http";
 import Header from "../../components/Header";
 import { Results } from "./styles";
+import { SearchRow, SearchCard } from "./styles";
 
 export default function Search() {
+  const [results, setResults] = useState([]);
   const search = new URLSearchParams(useLocation().search);
 
   useEffect(() => {
@@ -13,20 +15,33 @@ export default function Search() {
 
       const response = await api.getMovieSearch(searchQuery);
 
-      console.log(response.results);
+      setResults(response.results);
     };
 
     searchMovies();
-  }, [search]);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <>
       <Header />
       <Results>
         <h1 style={{ paddingTop: "150px", textAlign: "center" }}>
-          Pesquisando por "
+          Searching for "
           <span className="query--name">{search.get("query")}</span>"
         </h1>
+        <SearchRow>
+          {results.map((results, id) => (
+            <SearchCard key={id}>
+              <img
+                src={`https://image.tmdb.org/t/p/w300${results.poster_path}`}
+                alt={results.original_title}
+              />
+              <p class="movie--title">{results.original_title}</p>
+            </SearchCard>
+          ))}
+        </SearchRow>
       </Results>
     </>
   );

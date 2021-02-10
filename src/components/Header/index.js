@@ -23,7 +23,7 @@ export default function Header() {
             FAKEFLIX
           </Link>
         </div>
-        <div className="avatar">
+        <div className="nav--list">
           <NavList>
             <NavLink>
               <Link to="/favorites">Favorites</Link>

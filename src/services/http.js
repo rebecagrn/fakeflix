@@ -72,7 +72,7 @@ export default {
   },
 
   getMovieSearch: async (query) => {
-    const info = await fetchUrl(`/search/movie?api_key=${API_KEY}&${query}`);
+    let info = await fetchUrl(`/search/movie?api_key=${API_KEY}&${query}`);
 
     return info;
   },

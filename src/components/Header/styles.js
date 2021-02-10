@@ -37,7 +37,7 @@ export const HeaderStyle = styled.header`
     letter-spacing: 2px;
   }
 
-  .avatar {
+  .nav--list {
     height: 32px;
     display: flex;
     align-items: center;
@@ -57,6 +57,17 @@ export const HeaderStyle = styled.header`
 
     .logo {
       font-size: 22px;
+    }
+
+    .avatar--img,
+    span {
+      display: none;
+    }
+
+    li {
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 `;
