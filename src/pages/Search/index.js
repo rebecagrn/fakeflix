@@ -31,17 +31,21 @@ export default function Search() {
           Searching for "
           <span className="query--name">{search.get("query")}</span>"
         </h1>
-        <SearchRow>
-          {results.map((results, id) => (
-            <SearchCard key={id}>
-              <img
-                src={`https://image.tmdb.org/t/p/w300${results.poster_path}`}
-                alt={results.original_title}
-              />
-              <p class="movie--title">{results.original_title}</p>
-            </SearchCard>
-          ))}
-        </SearchRow>
+        {results.length > 0 ? (
+          <SearchRow>
+            {results.map((results, id) => (
+              <SearchCard key={id}>
+                <img
+                  src={`https://image.tmdb.org/t/p/w300${results.poster_path}`}
+                  alt={results.original_title}
+                />
+                <p class="movie--title">{results.original_title}</p>
+              </SearchCard>
+            ))}
+          </SearchRow>
+        ) : (
+          <h1>No results {`:(`}</h1>
+        )}
       </Results>
     </>
   );

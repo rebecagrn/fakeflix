@@ -16,18 +16,18 @@ export const Results = styled.div`
 export const SearchRow = styled.div`
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 `;
 
 export const SearchCard = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 5px 15px;
+  margin: 15px auto;
 
   img {
-    width: 200px;
-    padding: 10px;
+    width: 150px;
+    padding: 4px;
   }
 
   .movie--title {
