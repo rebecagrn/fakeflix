@@ -16,6 +16,7 @@ export const FavoriteCard = styled.div`
     padding: 8px 6px;
     border: 0;
     border-radius: 4px;
+    width: 100%;
 
     svg {
       position: relative;
