@@ -29,12 +29,23 @@ export const Featured = styled.section`
     padding-left: 60px;
     padding-bottom: 150px;
   }
+
+  @media (max-width: 768px) {
+    .featured--overlay-x {
+      padding-left: 25px;
+    }
+  }
 `;
 
 export const FeaturedTitle = styled.div`
   font-size: 60px;
   font-weight: 700;
   max-width: 35%;
+
+  @media (max-width: 768px) {
+    font-size: 38px;
+    max-width: 60%;
+  }
 `;
 
 export const Info = styled.div`

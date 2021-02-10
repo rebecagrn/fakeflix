@@ -49,4 +49,39 @@ export const HeaderStyle = styled.header`
       margin-right: 5px;
     }
   }
+
+  @media (max-width: 768px) {
+    nav {
+      padding: 0 25px;
+    }
+
+    .logo {
+      font-size: 22px;
+    }
+  }
+`;
+
+export const NavList = styled.ul`
+  display: flex;
+  list-style: none;
+`;
+
+export const NavLink = styled.li`
+  margin-right: 18px;
+
+  a {
+    color: #fff;
+    font-weight: 700;
+
+    &:hover {
+      color: #e5e5e5;
+    }
+  }
+
+  @media (max-width: 768px) {
+    margin-right: 10px;
+    a {
+      font-size: 13px;
+    }
+  }
 `;
