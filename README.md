@@ -33,10 +33,10 @@ $ yarn start
 
 <ul>
   <li>React</li>
+   <li>React Hooks</li>
   <li>Styled Components</li>
   <li>React Icons</li>
   <li>React-Router-Dom</li>
-  <li>Context API</li>
   <li>TMDB API</li>
   <li>Jest</li>
 </ul>
