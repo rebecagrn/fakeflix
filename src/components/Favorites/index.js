@@ -11,7 +11,7 @@ export default function Favorites({ type }) {
   return (
     <>
       <Header />
-      {favorite.length >= 0 ? (
+      {favorite.length > 0 ? (
         <FavoriteCard>
           {favorite.map((item, key) => (
             <div key={key} type="favorite" style={{ margin: "10px 20px" }}>
