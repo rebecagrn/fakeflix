@@ -2,10 +2,15 @@ import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import { CardRow, CardArea, MovieItem, Button } from "./styles";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import { FaStar } from "react-icons/fa";
+import { FaStar, FaEye } from "react-icons/fa";
 
 export default function MovieCard({ title, items }) {
-  const { addMovieToFavorite, favorite } = useContext(GlobalContext);
+  const {
+    addMovieToFavorite,
+    favorite,
+    addMovieToWatchlater,
+    watchlater,
+  } = useContext(GlobalContext);
 
   const [scrollX, setScrollX] = useState(0);
 
@@ -48,7 +53,11 @@ export default function MovieCard({ title, items }) {
           {items.results.length > 0 &&
             items.results.map((item, key) => {
               const storedMovie = favorite.find((obj) => obj.id === item.id);
+              const storedWatched = watchlater.find(
+                (obj) => obj.id === item.id
+              );
               const favoriteDisabled = !!storedMovie;
+              const watchlaterDisabled = !!storedWatched;
               return (
                 <MovieItem key={key}>
                   <img
@@ -63,6 +72,18 @@ export default function MovieCard({ title, items }) {
                       onClick={() => addMovieToFavorite(item)}
                     >
                       <FaStar color="#ccc" size={20} />
+                    </Button>
+                    <Button
+                      className="favorite-btn"
+                      type="button"
+                      disabled={watchlaterDisabled}
+                      onClick={() => addMovieToWatchlater(item)}
+                    >
+                      <FaEye
+                        color="#ccc"
+                        size={20}
+                        style={{ marginLeft: "3px" }}
+                      />
                     </Button>
                   </div>
                 </MovieItem>
