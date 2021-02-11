@@ -1,20 +1,30 @@
 import styled from "styled-components";
 
+export const Form = styled.form`
+  cursor: pointer;
+
+  svg {
+    cursor: pointer;
+    position: absolute;
+    z-index: -1;
+  }
+`;
+
 export const SearchField = styled.input`
   flex: 1;
-  width: 80%;
+  width: 30px;
   border: 0;
-  padding: 3px 10px;
+  color: #fff;
+  padding: 3px 15px;
   border-radius: 4px;
   font-size: 14px;
-
-  transition: all 0.3s ease-in;
+  background: transparent;
+  transition: width 0.5s;
+  opacity: 1;
 
   &:focus {
     width: 100%;
-  }
-
-  @media (max-width: 768px) {
-    width: 100%;
+    border-bottom: 1px solid #fff;
+    opacity: 1;
   }
 `;

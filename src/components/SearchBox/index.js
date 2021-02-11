@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 
 import { useHistory } from "react-router-dom";
-import { SearchField } from "./styles";
+import { Form, SearchField } from "./styles";
+import { FaSearch } from "react-icons/fa";
 
 export default function Search({ value }) {
   const [searchValue, setSearchValue] = useState("");
@@ -20,14 +21,16 @@ export default function Search({ value }) {
   }
 
   return (
-    <div>
-      <SearchField
-        className="form-control"
-        value={value}
-        onChange={(event) => setSearchValue(event.target.value)}
-        onKeyPress={({ key }) => key === "Enter" && handleSearchField()}
-        placeholder="Type to search..."
-      ></SearchField>
-    </div>
+    <Form>
+      <div>
+        <FaSearch color="#fff" />
+        <SearchField
+          className="form-control"
+          value={value}
+          onChange={(event) => setSearchValue(event.target.value)}
+          onKeyPress={({ key }) => key === "Enter" && handleSearchField()}
+        ></SearchField>
+      </div>
+    </Form>
   );
 }
