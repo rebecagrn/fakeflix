@@ -20,7 +20,7 @@ export const SearchField = styled.input`
   font-size: 14px;
   background: transparent;
   transition: width 0.5s;
-  opacity: 1;
+  opacity: 0;
 
   &:focus {
     width: 100%;

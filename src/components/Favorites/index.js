@@ -1,17 +1,17 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import Header from "../Header";
-import { FavoriteCard, FavText } from "./styles";
+import { FavoriteCard, HeadingText } from "./styles";
 import { MovieItem } from "../MovieCard/styles";
 import { FaEye } from "react-icons/fa";
 
-export default function Favorites({ item, type }) {
+export default function Favorites({ type }) {
   const { favorite, addMovieToWatchlater } = useContext(GlobalContext);
 
   return (
     <>
       <Header />
-      {favorite.length > 0 ? (
+      {favorite.length >= 0 ? (
         <FavoriteCard>
           {favorite.map((item, key) => (
             <div key={key} type="favorite" style={{ margin: "10px 20px" }}>
@@ -30,7 +30,9 @@ export default function Favorites({ item, type }) {
           ))}
         </FavoriteCard>
       ) : (
-        <FavText>You don't have any favorite movies yet! {`:(`}</FavText>
+        <HeadingText>
+          You don't have any favorite movies yet! {`:(`}
+        </HeadingText>
       )}
     </>
   );

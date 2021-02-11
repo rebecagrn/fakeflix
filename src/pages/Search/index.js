@@ -39,7 +39,7 @@ export default function Search() {
                   src={`https://image.tmdb.org/t/p/w300${results.poster_path}`}
                   alt={results.original_title}
                 />
-                <p class="movie--title">{results.original_title}</p>
+                <p className="movie--title">{results.original_title}</p>
               </SearchCard>
             ))}
           </SearchRow>

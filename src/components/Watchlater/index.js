@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import Header from "../Header";
-import { FavoriteCard, FavText } from "../Favorites/styles";
+import { FavoriteCard, HeadingText } from "../Favorites/styles";
 import { MovieItem } from "../MovieCard/styles";
 
 export default function Watchlater() {
@@ -24,7 +24,7 @@ export default function Watchlater() {
           ))}
         </FavoriteCard>
       ) : (
-        <FavText>You don't have any movies to watchlater</FavText>
+        <HeadingText>You don't have any movies to watchlater</HeadingText>
       )}
     </>
   );

@@ -57,7 +57,7 @@ export default function MovieCard({ title, items }) {
                 (obj) => obj.id === item.id
               );
               const favoriteDisabled = !!storedMovie;
-              const watchlaterDisabled = !!storedWatched;
+              const watchLaterDisabled = !!storedWatched;
               return (
                 <MovieItem key={key}>
                   <img
@@ -76,7 +76,7 @@ export default function MovieCard({ title, items }) {
                     <Button
                       className="favorite-btn"
                       type="button"
-                      disabled={watchlaterDisabled}
+                      disabled={watchLaterDisabled}
                       onClick={() => addMovieToWatchlater(item)}
                     >
                       <FaEye

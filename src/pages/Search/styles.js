@@ -10,6 +10,7 @@ export const Results = styled.div`
 
   h1 {
     margin-bottom: 30px;
+    text-align: center;
   }
 `;
 

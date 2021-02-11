@@ -31,7 +31,7 @@ export const FavoriteCard = styled.div`
   }
 `;
 
-export const FavText = styled.h3`
+export const HeadingText = styled.h3`
   display: flex;
   padding-top: 150px;
   justify-content: center;
