@@ -33,16 +33,15 @@ $ yarn start
 
 <ul>
   <li>React</li>
-   <li>React Hooks</li>
+  <li>React Hooks</li>
   <li>Styled Components</li>
   <li>React Icons</li>
   <li>React-Router-Dom</li>
-  <li>TMDB API</li>
-  <li>Jest</li>
+  <li>TMDb API</li>
 </ul>
 
 ### Deployed in Vercel
 
-[fakeflix](https://fakeflix-iota.vercel.app/)
+[Click Here](https://fakeflix-iota.vercel.app/)
 
-**By 📱💻❤ : [Rebeca](https://rebecadeveloper.netlify.app/)**
+**By ❤ : [Rebeca](https://rebecadeveloper.netlify.app/)**
